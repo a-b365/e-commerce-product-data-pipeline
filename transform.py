@@ -87,7 +87,7 @@ if __name__  == "__main__":
    df.loc[group_c,"category"] = "Clothing"
 
    df["rating"] = df.groupby("category")["rating"].transform(fill_missing)
-   df["review_count"] = df.groupby("category")["rating"].transform(fill_missing)
+   df["review_count"] = df.groupby("category")["review_count"].transform(fill_missing)
    df["review_count"] = df["review_count"].astype(np.int64)
 
    print(df.info())
